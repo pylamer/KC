@@ -1,3 +1,3 @@
 #!/bin/bash
 
-docker run --rm -d kc_l2
+docker run --rm -d -p 5000:5000 kc_l2
