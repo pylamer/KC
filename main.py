@@ -8,7 +8,7 @@ import redis
 # from b2b_scoring import init_redis, init_scheduler, views
 
 URL_SEC_NUMBER = 'https://lab.karpov.courses/hardml-api/module-5/get_secret_number'
-secret_number = get_secret_number(URL_SEC_NUMBER)
+
 
 app = Flask(__name__)
 
@@ -18,6 +18,7 @@ def return_secret_number():
 
 
 if __name__ == '__main__':
+    secret_number = get_secret_number(URL_SEC_NUMBER)
     app.run(host="0.0.0.0", port=5000)
 
     app_name = "web_app"
