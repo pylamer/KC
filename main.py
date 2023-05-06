@@ -29,6 +29,7 @@ if __name__ == '__main__':
     redis_client = redis.Redis(host="172.17.0.2", port=6379, db=0, password='lolkek123')
     redis_client.rpush(app_name, replic_name)
 
+
     redis_client.hset(replic_name, "host", host_name)
     redis_client.hset(replic_name, "port", port_name)
 
