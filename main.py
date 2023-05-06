@@ -19,7 +19,6 @@ def return_secret_number():
 
 if __name__ == '__main__':
     secret_number = get_secret_number(URL_SEC_NUMBER)
-    app.run(host="0.0.0.0", port=5000)
 
     app_name = "web_app"
     replic_name = "replic1"
@@ -36,4 +35,4 @@ if __name__ == '__main__':
 
     redis_client.close()
 
-
+    app.run(host="0.0.0.0", port=5000)
