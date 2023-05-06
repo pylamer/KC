@@ -8,16 +8,18 @@ import redis
 # from b2b_scoring import init_redis, init_scheduler, views
 
 URL_SEC_NUMBER = 'https://lab.karpov.courses/hardml-api/module-5/get_secret_number'
+secret_number = get_secret_number(URL_SEC_NUMBER)
 
 app = Flask(__name__)
 
 @app.route('/return_secret_number')
 def return_secret_number():
-    secret_number = get_secret_number(URL_SEC_NUMBER)
     return jsonify(secret_number=secret_number)
 
 
 if __name__ == '__main__':
+    app.run(host="0.0.0.0", port=5000)
+
     app_name = "web_app"
     replic_name = "replic1"
     host_name = "95.216.191.176"
@@ -31,5 +33,5 @@ if __name__ == '__main__':
     redis_client.hset(replic_name, "port", port_name)
 
     redis_client.close()
-    app.run(host="0.0.0.0", port=5000)
+
 
