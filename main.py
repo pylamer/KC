@@ -15,7 +15,7 @@ app = Flask(__name__)
 
 @app.route('/return_secret_number')
 def return_secret_number():
-    return jsonify(secret_number=secret_number)
+    return jsonify(secret_number=secret_number, random_number=random.randint(1, 10))
 
 
 if __name__ == '__main__':
