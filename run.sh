@@ -1,3 +1,4 @@
 #!/bin/bash
 
-docker run --rm -d -p 5000:5000 kc_l2
+$FLASK_PORT=5001
+docker run --rm -d -e FLASK_PORT=$FLASK_PORT -p $FLASK_PORT kc_l2
