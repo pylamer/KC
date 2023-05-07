@@ -25,8 +25,8 @@ if __name__ == '__main__':
     replic_name = "replic1"
     host_name = "95.216.191.176"
 
-    redis_client = redis.Redis(host="localhost", port=6379, db=0, password='lolkek123')
-    # redis_client = redis.Redis(host="172.17.0.2", port=6379, db=0, password='lolkek123')
+    # redis_client = redis.Redis(host="localhost", port=6379, db=0, password='lolkek123')
+    redis_client = redis.Redis(host="172.17.0.2", port=6379, db=0, password='lolkek123')
     redis_client.rpush(app_name, replic_name)
 
 
